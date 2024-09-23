@@ -32,6 +32,7 @@ int main(int argc, char **argv)
                     client_port, MAXLINE, 0); //클라이언트측에서 온 요청에 대한 헤더 정보
         printf("Connected to (%s, %s)\n", client_hostname, client_port);
         echo(connfd);
+        printf("Disconnected from (%s, %s)\n", client_hostname, client_port);
         Close(connfd);
     }
     exit(0);

@@ -1,7 +1,10 @@
 CC = gcc
 CFLAGS = -O2 -Wall
 
-all : echoserveri echoclient
+all : echoserverp echoserveri echoclient
+
+echoserverp: echoserverp.c echo.o csapp.o
+	$(CC) $(CFLAGS) -o echoserverp echoserverp.c echo.o csapp.o
 
 echoserveri: echoserveri.c echo.o csapp.o
 	$(CC) $(CFLAGS) -o echoserveri echoserveri.c echo.o csapp.o
